@@ -1,0 +1,67 @@
+### Get product service health
+GET /health
+Host: localhost:3002
+
+### Get products
+GET /
+Host: localhost:3002
+
+### Add product
+POST /
+Host: localhost:3002
+Content-Type: application/json
+
+{
+    "id": 0,
+    "name": "Logitech Wireless Mouse",
+    "price": 39.99,
+    "description": "A comfortable wireless mouse with precise tracking and long battery life, ideal for work, school, and everyday use.",
+    "image": "/mouse.jpg"
+}
+
+### Update product with too short of a description
+PUT /
+Host: localhost:3002
+Content-Type: application/json
+
+{
+    "id": 11,
+    "name": "Logitech Wireless Mouse",
+    "price": 39.99,
+    "description": "Nice mouse",
+    "image": "/mouse.jpg"
+}
+
+### Update product with invalid price
+PUT /
+Host: localhost:3002
+Content-Type: application/json
+
+{
+    "id": 11,
+    "name": "Logitech Wireless Mouse Pro",
+    "price": -10.99,
+    "description": "A premium wireless mouse with ergonomic design, high precision tracking, and multi-device connectivity for productivity and comfort.",
+    "image": "/mouse.jpg"
+}
+
+### Update product
+PUT /
+Host: localhost:3002
+Content-Type: application/json
+
+{
+    "id": 11,
+    "name": "Logitech Wireless Mouse Pro",
+    "price": 59.99,
+    "description": "A premium wireless mouse with ergonomic design, high precision tracking, and multi-device connectivity for productivity and comfort.",
+    "image": "/mouse.jpg"
+}
+
+### Get product by id
+GET /11
+Host: localhost:3002
+
+### Delete product by id
+DELETE /11
+Host: localhost:3002
